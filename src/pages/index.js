@@ -38,7 +38,7 @@ const IndexPage = () => {
 
       <Link to="/about">About</Link>
 
-      <select style={{fontFamily: 'Playfair Display'}} className='form-select'>
+      <select style={{fontFamily: 'Playfair Display', textAlign: 'left'}} className='form-select'>
         {options.map(option => (
             <option value = {option.value}>{option.label}</option>
         ))}
@@ -55,7 +55,7 @@ const IndexPage = () => {
       <button style={buttonDownload}>Download</button>
       <button style={buttonPrint}>Print</button>
       <button style={buttonCopy}>Copy</button>
-
+      
       <p>MADE BY JULIA, COTTER, MATT!!</p>
     </main>
   
@@ -77,6 +77,7 @@ const options = [
     {label: "Last Month", value: 2},
     {label: "Last 3 Months", value: 3},
     {label: "Last Year", value: 2},
+    
 ];
 
 
@@ -149,8 +150,21 @@ const buttonRun = {
           position: 'relative'
         };
 
-
-
-
-
-        
+/*
+            const [selectedFile, setSelectedFile] = useState(null);
+          
+            const handleFileInputChange = (event) => {
+              // Retrieve the selected file from the input element
+              const file = event.target.files[0];
+              setSelectedFile(file);
+            };
+          
+            const handleSubmit = (event) => {
+              event.preventDefault();
+              // Handle file submission here, for example, upload the file to a server
+              if (selectedFile) {
+                // Perform operations with the selected file
+                console.log('Selected file:', selectedFile);
+                // Here you can upload the file to a server, process it, etc.
+              }
+          }  */
